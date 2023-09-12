@@ -6,7 +6,8 @@ For moment, a workspace for us apply to a single project, which is a single repo
 
 ## 2.1 Create Python environment
 
-![](Create%20Python%20environment.png)
+
+![](../img/Create%20Python%20Environment.png)
 
 ![](Venv.png)
 
