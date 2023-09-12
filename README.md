@@ -8,4 +8,4 @@
   
   * [Python](https://code.visualstudio.com/docs/languages/python#_install-python-and-the-python-extension)
 
-  
+  * [Markdown](https://code.visualstudio.com/docs/languages/markdown)
