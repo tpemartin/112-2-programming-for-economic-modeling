@@ -51,8 +51,7 @@ Once you have installed Python, you can verify that it is installed by following
  2. Click ![](Toggle%20Panel.png) on the top right corner of the window.  
  3. Click "Terminal" in the menu bar.
  4. Type `python --version` to verify that Python is installed.
- 5. Type `exit()` to exit the Python interpreter. 
-
+ 
 You also want to check if `pip` (which is a package manager for Python) is installed. To do so, type `pip --version` in the terminal as in step 4. If it is installed, you will see the version number. If not, you will see an error message.
 
 
