@@ -4,21 +4,7 @@ Other than vscode itself, we have installed Python and Git. Now we want to fine 
 
 For moment, a workspace for us apply to a single project, which is a single repository (meaning a single folder). We will see later that a workspace can be a collection of folders.
 
-## 2.1 Create Python environment
-
-
-![](../img/Create%20Python%20Environment.png)
-
-![](Venv.png)
-
-![](Python%20interpreter.png)
-
-Once you create a Python environment, you also want to create the corresponding Python terminal.
-
-![](Python%20terminal.png)
-
-
-## 2.2 Extensions   
+## 2.1 Extensions   
 
 ![](../img/configure%20extension.png)
 
@@ -43,3 +29,22 @@ Put the following to `.vscode/extensions.json`
 		"github.vscode-pull-request-github"
 	],
 ```
+
+Show recommended extensions by typing `@recommended` in the search box.
+
+![](../img/recommended-extensions.png)
+
+Then click install one-by-one.
+
+## 2.2 Create Python environment
+
+
+![](../img/Create%20Python%20Environment.png)
+
+![](Venv.png)
+
+![](Python%20interpreter.png)
+
+Once you create a Python environment, you also want to create the corresponding Python terminal.
+
+![](Python%20terminal.png)
