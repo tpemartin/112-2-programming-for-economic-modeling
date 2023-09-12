@@ -4,4 +4,8 @@
 
 ## VScode
 
+  * [Python tutorial](https://code.visualstudio.com/docs/python/python-tutorial) 
+  
   * [Python](https://code.visualstudio.com/docs/languages/python#_install-python-and-the-python-extension)
+
+  
