@@ -32,7 +32,7 @@ Put the following to `.vscode/extensions.json`
 
 Show recommended extensions by typing `@recommended` in the search box.
 
-![](../img/recommended-extensions.png)
+![](../img/recommended-extensions.PNG)
 
 Then click install one-by-one.
 
