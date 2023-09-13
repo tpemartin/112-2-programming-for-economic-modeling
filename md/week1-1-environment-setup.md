@@ -48,7 +48,7 @@ For the course we will use [Python](https://www.python.org/). It is a free and o
 Once you have installed Python, you can verify that it is installed by following these steps:
 
  1. Launch your Visual Studio Code.  
- 2. Click ![](Toggle%20Panel.png) on the top right corner of the window.  
+ 2. Click ![](../img/Toggle%20Panel.png) on the top right corner of the window.  
  3. Click "Terminal" in the menu bar.
  4. Type `python --version` to verify that Python is installed.
  

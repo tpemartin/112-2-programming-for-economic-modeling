@@ -41,10 +41,10 @@ Then click install one-by-one.
 
 ![](../img/Create%20Python%20Environment.png)
 
-![](Venv.png)
+![](../img/Venv.png)
 
-![](Python%20interpreter.png)
+![](../img/Python%20interpreter.png)
 
 Once you create a Python environment, you also want to create the corresponding Python terminal.
 
-![](Python%20terminal.png)
+![](../img/Python%20terminal.png)
