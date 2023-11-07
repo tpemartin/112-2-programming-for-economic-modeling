@@ -9,5 +9,7 @@ def consumer_example():
     }
     return example
 
+x = consumer_example()
+
 def saving(w, R):
-    return (ce["beta"]/(1+ce["beta"]))*w
+    return (x["beta"]/(1+x["beta"]))*w

@@ -1,0 +1,20 @@
+{
+    "gameId": "game1",
+    "player1": {
+        "name": "A",
+        "strategies": [
+            "A1",
+            "A2"
+        ],
+        "played_strategy": null
+    },
+    "player2": {
+        "name": "B",
+        "strategies": [
+            "B1",
+            "B2"
+        ],
+        "played_strategy": null
+    },
+    "payoffMatrix": {
+        

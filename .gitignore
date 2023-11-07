@@ -160,3 +160,11 @@ cython_debug/
 #.idea/
 .DS_Store
 .vscode/settings.json
+data.json
+ipynb/save.p
+save.p
+ipynb/github_token.txt
+credentials.json
+ipynb/client_secrets.json
+ipynb/token.json
+ipynb/issues.ipynb
