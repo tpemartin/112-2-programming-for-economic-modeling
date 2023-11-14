@@ -168,3 +168,5 @@ credentials.json
 ipynb/client_secrets.json
 ipynb/token.json
 ipynb/issues.ipynb
+google-cloud-sdk/
+*.json
