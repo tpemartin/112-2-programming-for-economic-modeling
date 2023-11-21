@@ -1,6 +1,6 @@
 # Module
 
--[python-environment-manager](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-environment-manager)
+
 
 ## Search path
 
@@ -14,14 +14,26 @@ To locate your environment's site-packages directory, run the following:
 
 
 ```python
+import site
+site.getsitepackages()
+```
+
+
+
+
+    ['/Users/martin/Documents/GitHub/112-2-programming-for-economic-modeling/.venv/lib/python3.11/site-packages']
+
+
+
+Look for the path that ends with `.../pythonX.X/site-packages`. Reload your VScode. Use `sys.path` to check if the path is added to the search path. If you succeed, the following code should show your specified path.
+
+
+
+
+```python
 import sys
 print(sys.path)
 ```
-
-    ['/Users/martin/Documents/GitHub/112-2-programming-for-economic-modeling/ipynb', '/Library/Frameworks/Python.framework/Versions/3.11/lib/python311.zip', '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11', '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload', '', '/Users/martin/Documents/GitHub/112-2-programming-for-economic-modeling/.venv/lib/python3.11/site-packages', '/Users/martin/Documents/GitHub/112-2-programming-for-economic-modeling/module']
-
-
-Look for the path that ends with `.../pythonX.X/site-packages`. Reload your VScode. Use `sys.path` to check if the path is added to the search path.
 
 ## Module folder
 
