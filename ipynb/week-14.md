@@ -72,6 +72,15 @@ from gamepy.gamesheet import GameRoom
 game_room = GameRoom() # no need to pass scopes and spreadsheets_id again
 ```
 
+## Exercise: from gamepy import Games
+
+What should you do to make the following code valid?
+
+
+```python
+from gamepy import Games
+```
+
 # `Gamesheet` subpackage
 
 - `gamesheet.py` to control the game sheet in Google spreadsheets.
@@ -123,15 +132,6 @@ sheet_game_room._append(['g-2:r-7', 'g-2', 'r-7'])
 
 ```python
 sheet_game_room.last_row
-```
-
-## Exercise: from gamepy import Games
-
-What should you do to make the following code valid?
-
-
-```python
-from gamepy import Games
 ```
 
 ## Exercise Answers
