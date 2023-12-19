@@ -1,7 +1,4 @@
-# Recap
-
-- Inheritance: `Game` inherits from `Games` which inherits its class property `games_played` to track what games have been played, and its `new` method to create a new game, and its `switch` method to play a played game from `games_played`.
-
+# Package
 
 
 
@@ -11,134 +8,64 @@ from gamepy.games import Games
 
 
 ```python
-# prisoner's dilemma
-game, (player1, player2) = Games().new("g-1")
+game, (player1, _) = Games().new("g-2")
 ```
 
 
 ```python
-player1.play("C")
+# create a room
+game.create_room("r-26")
+```
+
+
+```python
+player1.name="Alice"
+player1.join("r-26")
+```
+
+
+```python
+player1.play("P")
+```
+
+
+```python
+game2, (_, player2) = Games().new("g-1")
+```
+
+
+```python
+player2.name="Jenkins"
+player2.join("r-26")
+```
+
+
+```python
 player2.play("D")
-game.payoff()
+```
+
+# Read Strategies Played
+
+
+```python
+player1.payoff()
 ```
 
 
 ```python
-# scissors paper rock
-game, (player1, player2) = game.new("g-2")
+player2.payoff()
 ```
 
 
 ```python
-player1.play("S")
-player2.play("R")
-game.payoff()
+player = player1
 ```
 
-- `__init__.py` to constrol package/subpackage imports through `__all__` and objects created in `__init__.py`.
-
-
-```python
-# objects created within gamepy/gamesheet/__init__.py
-from gamepy.gamesheet import scopes, spreadsheets_id
-# objects exported through __ALL__ definition
-from gamepy.gamesheet import GameRoom
-
-# You can combine above into one line as well
-```
-
-- `GameRoom` class to control the game-room sheet in Google spreadsheets. 
-
-
-```python
-game_room = GameRoom(scopes=scopes, spreadsheets_id=spreadsheets_id)
-```
-
-
-```python
-game_room.register_game_room("g-1:r-14")
-game_room.register_player1_name("g-1:r-14", "Alice")
-game_room.register_player1_choice("g-1:r-14", "C")
-```
-
-## Exercise: GameRoom()
-What should you do to make the following code valid?
-
-
-
-```python
-from gamepy.gamesheet import GameRoom
-
-game_room = GameRoom() # no need to pass scopes and spreadsheets_id again
-```
-
-## Exercise: from gamepy import Games
-
-What should you do to make the following code valid?
-
-
-```python
-from gamepy import Games
-```
-
-# `Gamesheet` subpackage
-
-- `gamesheet.py` to control the game sheet in Google spreadsheets.
-- `gameroom.py` to control the game-room sheet in Google spreadsheets.
-
-## `gamesheet.py`
-
-- `Service` class to initiate a Google sheets service object through `service._build_sheet_service` method.
-- `Sheet` class inherits from `Service` to control a Google sheet with **name** from a spreadsheet with **spreadsheet_id** and **scopes** specified. 
-
-
-```python
-from gamepy.gamesheet.gamesheet import Service, Sheet, scopes, spreadsheets_id
-```
-
-
-```python
-# initiate a Google sheet service object
-service = Service(spreadsheets_id=spreadsheets_id, scopes=scopes)
-
-# check serice property and methods
-service._build_sheet_service()
-```
-
-
-```python
-
-sheet_game_room = Sheet("game-room", spreadsheets_id=spreadsheets_id, scopes=scopes)
-sheet_play = Sheet("play", spreadsheets_id=spreadsheets_id, scopes=scopes)
-```
-
-
-```python
-# check property and method
-sheet_game_room._get("B8:E12")
-
-```
-
-
-```python
-sheet_game_room._update(8,[None, None, None, "Jack"])
-```
-
-
-```python
-sheet_game_room._append(['g-2:r-7', 'g-2', 'r-7'])
-```
-
-
-```python
-sheet_game_room.last_row
-```
-
-## Exercise Answers
-
-- [answers](https://github.com/tpemartin/gamepy/commit/5c901ea3121bc376eedd3f85d3c21024088998c0)
+# Exercise: warning when room full
 
 # pip installable
+
+> Every package/subpackage needs a `__init__.py` file.
 
 To create a GitHub pip installable package, you can follow these steps:
 
@@ -196,5 +123,3 @@ pip install git+https://github.com/tpemartin/gamepy.git@v1.0.4
 Replace `username` with your GitHub username, `repo` with the name of your repository, and `tag` with the tag version you provided in step 6.
 
 That's it! Your GitHub pip installable package is ready. Users can install it using pip by referencing your GitHub repository.
-
-
