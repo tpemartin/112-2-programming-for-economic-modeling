@@ -95,3 +95,83 @@ player2.play_mixed({"C": 0.3, "D": 0.7})
 ```python
 player1.payoff()
 ```
+
+# Package
+
+## Steps
+
+1. Run `python setup.py sdist bdist_wheel` to build the package.
+2. Commit in Github desktop and add a version tag.
+3. In Github.com create new release.
+
+## installation
+
+1. Go to the terminal of your current environment.
+2. `pip install git+https://github.com/tpemartin/gamepy.git@<tag>` where `<tag>` is the version tag you created.
+3. Reload your vscode window.
+
+> Make sure your local path specification does not point to the local version of the package.
+
+## External file
+
+> How to include a credentials.json to a pip github installable package and use that file in a package module?
+
+### ChatGPT answer
+
+To include a `credentials.json` file in a pip-installable package and use it within a package module, you can follow these steps:
+
+1. Create a directory structure for your package. For example:
+   ```
+   mypackage/
+   ├── mypackage/
+   │   ├── __init__.py
+   │   └── mymodule.py
+   ├── credentials.json
+   ├── setup.py
+   └── README.md
+   ```
+
+2. Place your `credentials.json` file in the root directory of your package.
+
+3. In your `setup.py` file, include the `data_files` parameter to specify that `credentials.json` should be included in the package distribution:
+
+   ```python
+   from setuptools import setup
+
+   setup(
+       name='mypackage',
+       version='1.0',
+       packages=['mypackage'],
+       package_data={'mypackage': ['../credentials.json']},
+       include_package_data=True,
+       install_requires=[
+           'requests',
+       ],
+   )
+   ```
+
+4. In your package module (`mymodule.py`), you can access the `credentials.json` file using its relative path:
+
+   ```python
+   import os
+   import json
+
+   def load_credentials():
+       credentials_path = os.path.join(os.path.dirname(__file__), '../credentials.json')
+       with open(credentials_path) as f:
+           credentials = json.load(f)
+       return credentials
+   ```
+
+   The `os.path.join` function is used to construct the correct path to `credentials.json` relative to your module file.
+
+5. Build and install your package using `pip` or `python setup.py install`. This will include the `credentials.json` file in the package distribution.
+
+When using the installed package, you can import the `mymodule` and call the `load_credentials()` function to load the contents of `credentials.json`.
+
+Please note that including sensitive credentials in a package may pose security risks, especially if the package is distributed publicly. It's generally recommended to use environment variables or other secure methods for storing and accessing credentials.
+
+
+```python
+
+```
